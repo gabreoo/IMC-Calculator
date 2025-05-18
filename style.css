@@ -1,0 +1,23 @@
+body {
+  background-color: #16171b;
+}
+#retangulo {
+  position: absolute;      /* ou `fixed` se preferir fixar à viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0%;
+  margin: 0px;
+}
+#retangulo {
+  width: 558px;
+  height: 664px;
+  flex-shrink: 0;
+  border-radius: 31px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, #1c1d23 71.71%, #16181c 162.7%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 1px -3px rgba(255, 255, 255, 0.25) inset,
+    0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
