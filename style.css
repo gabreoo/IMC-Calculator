@@ -1,36 +1,108 @@
-* {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #16171b;
-}
-p, h1 {
-  color: aliceblue;
+  color: rgb(248, 248, 248);
 }
 
-
-
-#retangulo {
-  position: absolute;      /* ou `fixed` se preferir fixar à viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 0%;
-  margin: 0px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-#retangulo {
-  width: 558px;
-  height: 664px;
-  flex-shrink: 0;
-  border-radius: 31px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: linear-gradient(180deg, #1c1d23 71.71%, #16181c 162.7%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 1px 1px -3px rgba(255, 255, 255, 0.25) inset,
-    0px 1px 2px 0px rgba(60, 64, 67, 0.3),
-    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+.form input:focus {
+  outline: none; /* remove o contorno padrão */
+  border: 1px solid #237BFF; /* ou qualquer cor que quiser */
+  box-shadow: 0 0 0 2px rgba(35, 123, 255, 0.3); /* opcional: efeito de foco suave */
+}
+.card {
+  width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #1C1D23 70%, #16181C 100%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+.icon-wrapper img {
+  width: 80px;
+  height: 80px;
+  
+}
+.icon-wrapper {
+  background-color: #0f0f10;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+h2 {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: left;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: left;
+}
+
+.form label {
+  font-size: 16px;
+}
+
+.form input {
+  height: 52px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 16px;
+  background: #1a1b1e;
+  color: white;
+  font-size: 16px;
+}
+
+.form input::placeholder {
+  color: #6F6F72;
+}
+
+.botao-wrapper {
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  border-radius: 15px;
+}
+
+.botao-wrapper button {
+  width: 100%;
+  height: 64px;
+  border: none;
+  border-radius: 15px;
+  background-color: #237BFF;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.botao-wrapper button:hover {
+  background-color: #3c89fd;
+}

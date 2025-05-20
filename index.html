@@ -4,19 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de IMC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="retangulo"></div>
-    <h1>Calcule seu IMC</h1>
-    <form action="" method="get" class="form">
-    <p>Peso:</p><input class="peso" type="text" value="" placeholder="Digite seu peso"></p>
-    </form>
-    <p>Altura:</p><input class="peso" type="text" value="" placeholder="Digite sua altura em centimetros"></p>
-    <button type="submit">Enviar</button>
-    </form>
+    <div class="container">
+      <div class="card">
+        <div class="icon-wrapper">
+          <img src="assets/logo.svg" alt="Ícone de saúde" />
+        </div>
+        <h2>Calcule seu IMC</h2>
+
+        <form class="form">
+          <div class="campo">
+            <label for="peso">Peso:</label>
+            <input id="peso" type="text" placeholder="Digite seu peso" />
+          </div>
+          <div class="campo">
+            <label for="altura">Altura:</label>
+            <input
+              id="altura"
+              type="text"
+              placeholder="Digite sua altura em centímetros"
+            />
+          </div>
+
+          <div class="botao-wrapper">
+            <button type="submit">Calcular</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
