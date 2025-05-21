@@ -3,17 +3,20 @@ const form = document.querySelector(".form"); // Seleciona o formulário
 function formEvent(event) {
   event.preventDefault();
 
-  function calculate() {
-    // Pega o valor digitado e converte para número
-    const peso = parseFloat(document.getElementById("peso").value);
-    const altura = parseFloat(document.getElementById("altura").value);
-    const resultado = altura ** 2 / peso;
-    return resultado;
+  const peso = parseFloat(document.getElementById("peso").value);
+  const altura = parseFloat(document.getElementById("altura").value);
+  const resultado = altura * altura / peso;
+
+  if (isNaN(peso) || peso <= 0 || isNaN(altura) || altura <= 0) {
+    alert('Digite um número válido')
+    return;
   }
-  const resultado = calculate()
-  if (resultado > 0){
-console.log('ok')
+
+  // function calculate() {
+
+  //   }
   }
-}
+
+
 
 form.addEventListener("submit", formEvent);
