@@ -17,17 +17,26 @@ function formEvent(event) {
     alert("Digite um número válido");
     return;
   }
-
-  if (resultado <= 18.5) {
-    console.log("1");
-  } else if (resultado >= 18.5 && resultado <= 24.99) {
-    console.log("2");
-  } else if (resultado >= 25.0 && resultado <= 29.9) {
-    console.log("3");
-  } else if (resultado >= 30.0 && resultado <= 35.99) {
-    console.log("4");
-  } else if (resultado >= 35.0 && resultado <= 39.99) {
-    console.log("5");
+  const imcChecker = [
+    "desnutrição",
+    "magreza",
+    "normal",
+    "sobrepeso",
+    "obesidade",
+  ];
+  let = classificacaoIndex;
+  if (resultado >= 0 && resultado < 17) {
+    classificacaoIndex = 0;
+  } else if (resultado >= 17 && resultado < 18.5) {
+    classificacaoIndex = 1;
+  } else if (resultado >= 18.5 && resultado < 25) {
+    classificacaoIndex = 2;
+  } else if (resultado >= 25 && resultado < 30) {
+    classificacaoIndex = 3;
+  } else if (resultado >= 30) {
+    classificacaoIndex = 4;
+  } else {
+    alert("Erro: verifique os números digitados.");
   }
 }
 
