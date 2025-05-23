@@ -1,5 +1,6 @@
 const form = document.querySelector(".form"); // Seleciona o formulário
 
+
 function formEvent(event) {
   event.preventDefault(); // bloqueia o restart dos dados no formulario ao enviar
 
@@ -45,18 +46,16 @@ function formEvent(event) {
   } else {
     alert("Erro: verifique os números digitados.");
   }
-
+function nivelImc() {
+    if (){}
   const resultPopup = document.querySelector(".result-popup");
   // Mostrar o resultado para todas as classificações, não apenas para "normal"
   resultPopup.style.display = "block";
   resultPopup.textContent = `Seu IMC é ${resultado.toFixed(2)} (${classificacao})`;
-  /**  if (classificacao === imcChecker[2]) {
-  resultPopup.style.display = "block";
-  resultPopup.textContent = `Seu IMC é ${resultado.toFixed(2)} (${classificacao})`;
-  } else {
-    resultPopup.style.display = "none";
-  }
-    */
+}
+
+
+
 }
 // ao clicar em enviar ele vai disparar toda a função de formEvent
 form.addEventListener("submit", formEvent);
