@@ -3,22 +3,24 @@ const form = document.querySelector(".form"); // Seleciona o formulário
 function formEvent(event) {
   event.preventDefault(); // bloqueia o restart dos dados no formulario ao enviar
 
-  const peso = parseFloat(
+  let peso = parseFloat(
     document.getElementById("peso").value.replace(",", ".")
-  ); // o value.replace troca a virgula por ponto pro js poder trabalhar no calculo
-  const altura = parseFloat(document.getElementById("altura").value);
+  ); // O value.replace troca a virgula por ponto pro js poder trabalhar no calculo
+  let altura = parseFloat(
+    document.getElementById("altura").value.replace(",", ".")
+  );
 
-  if (altura < 3) {
-    altura = altura * 100;
+  if (altura > 3) {
+    altura = altura / 100;
   }
   // Verifica se o número digitado é maior que 0 ou se realmente é um número
   if (isNaN(peso) || peso <= 0 || isNaN(altura) || altura <= 0) {
     alert("Digite um número válido");
     return;
   }
-
-  const resultado = (altura * altura) / peso;
-
+  // calcular IMC
+  const resultado = peso / (altura * altura);
+  // Armazena os dados da tabela IMC
   const imcChecker = [
     "desnutrição",
     "magreza",
@@ -27,8 +29,9 @@ function formEvent(event) {
     "obesidade",
   ];
 
+  // Se IMC for x ele vai retornar o IMC de acordo com a tabela acima
   let classificacao = "";
-  
+
   if (resultado >= 0 && resultado < 17) {
     classificacao = imcChecker[0];
   } else if (resultado >= 17 && resultado < 18.5) {
@@ -42,7 +45,18 @@ function formEvent(event) {
   } else {
     alert("Erro: verifique os números digitados.");
   }
-}
 
+  const resultPopup = document.querySelector(".result-popup");
+  // Mostrar o resultado para todas as classificações, não apenas para "normal"
+  resultPopup.style.display = "block";
+  resultPopup.textContent = `Seu IMC é ${resultado.toFixed(2)} (${classificacao})`;
+  /**  if (classificacao === imcChecker[2]) {
+  resultPopup.style.display = "block";
+  resultPopup.textContent = `Seu IMC é ${resultado.toFixed(2)} (${classificacao})`;
+  } else {
+    resultPopup.style.display = "none";
+  }
+    */
+}
 // ao clicar em enviar ele vai disparar toda a função de formEvent
 form.addEventListener("submit", formEvent);

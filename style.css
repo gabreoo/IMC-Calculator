@@ -13,21 +13,20 @@ body {
 }
 .form input:focus {
   outline: none; /* remove o contorno padrão */
-  border: 1px solid #237BFF; /* ou qualquer cor que quiser */
+  border: 1px solid #237bff; /* ou qualquer cor que quiser */
   box-shadow: 0 0 0 2px rgba(35, 123, 255, 0.3); /* opcional: efeito de foco suave */
 }
 .card {
   width: 400px;
   padding: 40px;
   border-radius: 20px;
-  background: linear-gradient(180deg, #1C1D23 70%, #16181C 100%);
+  background: linear-gradient(180deg, #1c1d23 70%, #16181c 100%);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
   text-align: center;
 }
 .icon-wrapper img {
   width: 80px;
   height: 80px;
-  
 }
 .icon-wrapper {
   background-color: #0f0f10;
@@ -38,7 +37,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
@@ -82,12 +81,16 @@ h2 {
 }
 
 .form input::placeholder {
-  color: #6F6F72;
+  color: #6f6f72;
 }
 
 .botao-wrapper {
   padding: 1px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
   border-radius: 15px;
 }
 
@@ -96,7 +99,7 @@ h2 {
   height: 64px;
   border: none;
   border-radius: 15px;
-  background-color: #237BFF;
+  background-color: #237bff;
   color: white;
   font-size: 18px;
   font-weight: 500;
@@ -105,4 +108,8 @@ h2 {
 
 .botao-wrapper button:hover {
   background-color: #3c89fd;
+}
+
+.result-popup{
+  color:rgb(0, 255, 170)
 }
