@@ -21,21 +21,21 @@ function formEvent(event) {
   // calcular IMC
   const resultado = peso / (altura * altura);
   // Armazena os dados da tabela IMC
-  const imcChecker = ["desnutrido", "magro", "normal", "sobrepeso", "obeso"];
+  const classificacaoImc = ["desnutrido", "magro", "normal", "sobrepeso", "obeso"];
 
   // Se IMC for x-numero ele vai retornar o IMC de acordo com a tabela acima
   let classificacao = "";
 
   if (resultado >= 0 && resultado < 17) {
-    classificacao = imcChecker[0];
+    classificacao = classificacaoImc[0];
   } else if (resultado >= 17 && resultado < 18.5) {
-    classificacao = imcChecker[1];
+    classificacao = classificacaoImc[1];
   } else if (resultado >= 18.5 && resultado < 25) {
-    classificacao = imcChecker[2];
+    classificacao = classificacaoImc[2];
   } else if (resultado >= 25 && resultado < 30) {
-    classificacao = imcChecker[3];
+    classificacao = classificacaoImc[3];
   } else if (resultado >= 30) {
-    classificacao = imcChecker[4];
+    classificacao = classificacaoImc[4];
   } else {
     alert("Erro: verifique os números digitados.");
   }
@@ -52,13 +52,13 @@ function formEvent(event) {
   const ImcMessage = `Seu IMC é: ${resultado.toFixed(2)} e você está: <strong>${classificacao}</strong>`;
 
   if (
-    classificacao === imcChecker[0] ||
-    classificacao === imcChecker[1] ||
-    classificacao === imcChecker[3] ||
-    classificacao === imcChecker[4]
+    classificacao === classificacaoImc[0] ||
+    classificacao === classificacaoImc[1] ||
+    classificacao === classificacaoImc[3] ||
+    classificacao === classificacaoImc[4]
   ) {
     redResult.innerHTML = `<p>${ImcMessage}</p>`;
-  } else if (classificacao === imcChecker[2]) {
+  } else if (classificacao === classificacaoImc[2]) {
     greenResult.innerHTML = `<p>${ImcMessage}</p>`;
   }
 }
