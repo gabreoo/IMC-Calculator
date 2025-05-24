@@ -1,6 +1,5 @@
 const form = document.querySelector(".form"); // Seleciona o formulário
 
-
 function formEvent(event) {
   event.preventDefault(); // bloqueia o restart dos dados no formulario ao enviar
 
@@ -22,15 +21,9 @@ function formEvent(event) {
   // calcular IMC
   const resultado = peso / (altura * altura);
   // Armazena os dados da tabela IMC
-  const imcChecker = [
-    "desnutrição",
-    "magreza",
-    "normal",
-    "sobrepeso",
-    "obesidade",
-  ];
+  const imcChecker = ["desnutrido", "magro", "normal", "sobrepeso", "obeso"];
 
-  // Se IMC for x ele vai retornar o IMC de acordo com a tabela acima
+  // Se IMC for x-numero ele vai retornar o IMC de acordo com a tabela acima
   let classificacao = "";
 
   if (resultado >= 0 && resultado < 17) {
@@ -46,16 +39,29 @@ function formEvent(event) {
   } else {
     alert("Erro: verifique os números digitados.");
   }
-function nivelImc() {
-    if (){}
-  const resultPopup = document.querySelector(".result-popup");
-  // Mostrar o resultado para todas as classificações, não apenas para "normal"
-  resultPopup.style.display = "block";
-  resultPopup.textContent = `Seu IMC é ${resultado.toFixed(2)} (${classificacao})`;
+
+  // puxa let estilizada com o css
+  let redResult = document.querySelector(".red-result");  // puxa let estilizada com o css
+  let greenResult = document.querySelector(".green-result");  // puxa let estilizada com o css
+
+  // Limpa os anteriores
+  redResult.innerHTML = "";
+  greenResult.innerHTML = "";
+
+  // declaro a mensagem a ser exibida com a let estilizada
+  const ImcMessage = `Seu IMC é: ${resultado.toFixed(2)} e você está: <strong>${classificacao}</strong>`;
+
+  if (
+    classificacao === imcChecker[0] ||
+    classificacao === imcChecker[1] ||
+    classificacao === imcChecker[3] ||
+    classificacao === imcChecker[4]
+  ) {
+    redResult.innerHTML = `<p>${ImcMessage}</p>`;
+  } else if (classificacao === imcChecker[2]) {
+    greenResult.innerHTML = `<p>${ImcMessage}</p>`;
+  }
 }
 
-
-
-}
 // ao clicar em enviar ele vai disparar toda a função de formEvent
 form.addEventListener("submit", formEvent);

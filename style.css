@@ -110,6 +110,15 @@ h2 {
   background-color: #3c89fd;
 }
 
-.result-popup{
-  color:rgb(0, 255, 170)
+.green-result p{
+  color:rgb(0, 255, 170);
+  font-size: 16px;
+  margin-top: 48px;
+  line-height: 16px;
+}
+.red-result p{
+  color: rgb(255, 64, 64);
+  font-size: 16px;
+  margin-top: 48px;
+  line-height: 16px;
 }
