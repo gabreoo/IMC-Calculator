@@ -2,7 +2,7 @@
 
 ## Visão Geral
 Esta é uma calculadora de Índice de Massa Corporal (IMC) que permite ao usuário inserir seu peso e altura, calculando automaticamente o IMC e fornecendo uma classificação do resultado (desnutrido, magro, normal, sobrepeso ou obeso). A interface apresenta feedback visual, destacando resultados saudáveis em verde e não saudáveis em vermelho.
-
+O projeto foi totalmente desenvolvido por mim, desde do design a última linha de código.
 ## Estrutura do Projeto
 - `index.html` - Página principal com o formulário de entrada
 - `styles.css` - Estilos para a interface, incluindo as classes para resultados (vermelho/verde)
